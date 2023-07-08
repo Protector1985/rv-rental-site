@@ -1,3 +1,5 @@
+
+import {useEffect} from 'react';
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
@@ -15,10 +17,15 @@ import PageError from "./page-error";
  *
  * @returns The top-level react component representing the theme.
  */
-const Theme = ({ state }) => {
+const Theme = ({ state, actions }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  useEffect(() => {
+    actions.source.fetch(state.router.link);
+  }, []);
 
+  
+  
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -70,7 +77,6 @@ const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
 `;
 
 const Main = styled.div`

@@ -2,9 +2,9 @@ const settings = {
   "name": "rv-app",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "http://localhost:10003",
+      "title": "Valley Wohnmobile",
+      "description": "Deutsche Wohmobilvermietung in Los Angeles"
     }
   },
   "packages": [
@@ -18,25 +18,17 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
+              "Über uns",
+              "/category/ueber-uns/"
             ],
             [
-              "Travel",
+              "Blog",
               "/category/travel/"
             ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
           ],
           "featured": {
-            "showOnList": false,
-            "showOnPost": false
+            "showOnList": true,
+            "showOnPost": true
           }
         }
       }
@@ -45,12 +37,12 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "api": "http://localhost:10003/wp-json"
         }
       }
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
+    "@frontity/html2react",
   ]
 };
 

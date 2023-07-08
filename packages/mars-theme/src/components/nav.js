@@ -28,15 +28,17 @@ const Nav = ({ state }) => (
 export default connect(Nav);
 
 const NavContainer = styled.nav`
+  position: absolute;
   list-style: none;
   display: flex;
-  width: 848px;
+  right: 0px;
+  align-items:center;
+  width: auto;
   max-width: 100%;
   box-sizing: border-box;
   padding: 0 24px;
-  margin: 0;
   overflow-x: auto;
-
+  background-color: transparent!important;
   @media screen and (max-width: 560px) {
     display: none;
   }
@@ -45,7 +47,8 @@ const NavContainer = styled.nav`
 const NavItem = styled.div`
   padding: 0;
   margin: 0 16px;
-  color: #fff;
+  color: color: #fff;
+  font-weight: 600;
   font-size: 0.9em;
   box-sizing: border-box;
   flex-shrink: 0;
